@@ -15,10 +15,10 @@
         <div class="description">
           <span class="name"> {{ product.name }} </span>
           <span class="price">{{ product.price }}</span>
-          <div class="quantity-area">
-            <button><box-icon name="minus" size="xs"></box-icon></button>
+          <div class="quantity-area" v-if="product.active">
+            <button v-on:click.stop="product.quantity = product.quantity - 1" :disabled="product.quantity <= 1">-</button>
             <span class="quantity">{{ product.quantity }}</span>
-            <button><box-icon name="plus" size="xs"></box-icon></button>
+            <button v-on:click.stop="product.quantity = product.quantity + 1">+</button>
           </div>
         </div>
       </div>
@@ -34,14 +34,20 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Meat Burguer</td>
-            <td>5.99</td>
+          <tr 
+          v-for="product in products"
+          :key="product.id"
+          >
+            <template v-if="product.active">
+                <td>{{ product.quantity + 'x ' + product.name }}</td>
+                <td>{{ (product.price * product.quantity).toFixed(2) }}</td>
+            </template>
+            
           </tr>
 
           <tr>
             <th>Total</th>
-            <th>5.99</th>
+            <th>{{ total() }}</th>
           </tr>
         </tbody>
       </table>
@@ -120,7 +126,19 @@ export default {
                   "quantity": 1
               }
         ],
-    };
+      
+    }
+    },
+   methods: {
+        total: function(){
+          var total = 0;
+           this.products.forEach(function(item){
+            if (item.active) {
+              total += item.price * item.quantity;
+            }
+           });
+           return total.toFixed(2);
+        }
   },
 };
 </script>
