@@ -24,8 +24,8 @@
       </div>
     </section>
 
-    <section class="summary">
-      <strong>Resumo do pedido</strong>
+    <section class="summary" v-if="total()>0">
+      <strong>Order Details</strong>
       <table>
         <thead>
           <tr>
