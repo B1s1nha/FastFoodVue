@@ -63,63 +63,63 @@ export default {
       message: "Make your food choice!",
       products: [
               {
-                  "photo": "../assets/img/hamburguermeat.png",
+                  "photo": "/img/hamburguermeat.png",
                   "name": "Meat Burguer",
                   "price": 5.99,
                   "active": false,
                   "quantity": 1
               },
               {
-                  "photo": "../assets/img/hamburguerchicken.png",
+                  "photo": "/img/hamburguerchicken.png",
                   "name": "Chicken Burguer",
                   "price": 4.99,
                   "active": false,
                   "quantity": 1
               },
               {
-                  "photo": "../assets/img/hamburguerbacon.png",
+                  "photo": "/img/hamburguerbacon.png",
                   "name": "Bacon Burguer",
                   "price": 2.99,
                   "active": false,
                   "quantity": 1
               },
               {
-                  "photo": "../assets/img/fries.png",
+                  "photo": "/img/fries.png",
                   "name": "Fries",
                   "price": 2.99,
                   "active": false,
                   "quantity": 1
               },
               {
-                  "photo": "../assets/img/nuggets.png",
+                  "photo": "/img/nuggets.png",
                   "name": "Nuggets",
                   "price": 3.49,
                   "active": false,
                   "quantity": 1
               },
               {
-                  "photo": "../assets/img/cookies.png",
+                  "photo": "/img/cookie.png",
                   "name": "cookies",
                   "price": 2.79,
                   "active": false,
                   "quantity": 1
               },
               {
-                  "photo": "../assets/img/soda.png",
+                  "photo": "/img/soda.png",
                   "name": "Mango Soda",
                   "price": 1.99,
                   "active": false,
                   "quantity": 1
               },
               {
-                  "photo": "../assets/img/icetea.png",
+                  "photo": "/img/icetea.png",
                   "name": "Ice Tea",
                   "price": 1.99,
                   "active": false,
                   "quantity": 1
               },
               {
-                  "photo": "../assets/img/water.png",
+                  "photo": "/img/water.png",
                   "name": "Water",
                   "price": 1.49,
                   "active": false,
