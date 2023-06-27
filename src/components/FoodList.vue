@@ -142,3 +142,136 @@ export default {
   },
 };
 </script>
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
+
+body {
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(255, 255, 255);
+}
+
+main > section.items h4 {
+  text-align: center;
+  margin-top: 0;
+  width: 100%;
+  color: rgb(20, 33, 61);
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+
+main > section.items {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid rgb(229, 229, 229);;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 500px;
+  min-width: 300px;
+  justify-content: center;
+}
+
+section.items .product {
+  border: 1px solid rgb(229, 229, 229);;
+  border-radius: 10px;
+  margin: 10px;
+  flex: 0 0 calc(33.333% - 24px);
+  cursor: pointer;
+  text-align: center;
+}
+
+section.items .product.selected {
+  border: 2px solid rgb(252, 163, 17);
+}
+
+section.items .photo img {
+  max-width: 90px;
+  max-height: 90px;
+  width: auto;
+  height: auto;
+}
+
+section.items .description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 11px;
+  line-height: 15px;
+  color:rgb(20, 33, 61);
+}
+
+section.items .description .price {
+  font-weight: bold;
+  margin: 4px auto;
+}
+
+section.items .description .quantity-area {
+  margin: 8px auto;
+  height: 14px;
+}
+
+section.items .description .quantity-area button {
+  width: 16px;
+  height: 16px;
+  display: inline-grid;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+section.items .description .quantity-area .quantity {
+  font-weight: bold;
+  margin: 0 4px;
+}
+
+section.summary {
+  background-color: rgb(245, 245, 245);
+  padding: 20px;
+  min-height: 200px;
+  min-width: 200px;
+  border-radius: 10px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translate(-50%, -50%);
+}
+
+section.comment {
+  background-color: rgb(245, 245, 245);
+  padding: 20px;
+  min-width: 200px;
+  border-radius: 10px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 19.75%;
+  transform: translate(-50%, -50%);
+}
+
+section.summary table {
+  width: 100%;
+  padding-top: 12px;
+  font-size: 11px;
+  margin: auto;
+}
+
+section.summary table tbody tr:last-of-type th {
+  border-top: 1px solid rgb(245, 245, 245);
+  padding-top: 4px;
+}
+
+</style>
